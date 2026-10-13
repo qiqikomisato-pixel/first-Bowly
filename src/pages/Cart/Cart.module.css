@@ -1,0 +1,280 @@
+.emptyCart {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.emptyEmoji {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.emptyCart p {
+  font-size: 20px;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.emptyBtn {
+  padding: 14px 40px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-title);
+  cursor: pointer;
+}
+
+.emptyBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px rgba(74, 55, 40, 0.15);
+}
+
+.cartList {
+  margin-bottom: 30px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-card);
+  padding: 16px 20px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.itemEmoji {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  font-weight: 700;
+  color: var(--color-title);
+  display: block;
+  font-size: 16px;
+}
+
+.itemPrice {
+  color: var(--color-price);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.itemIngredients {
+  font-size: 12px;
+  color: var(--color-text);
+  display: block;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.qtyBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-input);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-title);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qtyBtn:hover {
+  border-color: var(--color-text);
+}
+
+.qtyCount {
+  font-weight: 700;
+  color: var(--color-title);
+  min-width: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: var(--color-error);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.cartSummary {
+  background-color: var(--bg-card);
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-title);
+  margin-bottom: 16px;
+}
+
+.summaryTotal {
+  color: var(--color-price);
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-title);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.checkoutBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px rgba(74, 55, 40, 0.15);
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+  .cartItem {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .itemEmoji {
+    font-size: 28px;
+  }
+
+  .itemName {
+    font-size: 14px;
+  }
+
+  .itemPrice {
+    font-size: 14px;
+  }
+
+  .itemIngredients {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .itemActions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .qtyBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .qtyCount {
+    font-size: 15px;
+    min-width: 20px;
+  }
+
+  .removeBtn {
+    font-size: 18px;
+    padding: 4px 4px;
+  }
+
+  .cartSummary {
+    padding: 18px;
+  }
+
+  .summaryRow {
+    font-size: 18px;
+  }
+
+  .checkoutBtn {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cartItem {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .itemEmoji {
+    font-size: 24px;
+  }
+
+  .itemName {
+    font-size: 13px;
+  }
+
+  .itemInfo {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .qtyBtn {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+
+  .qtyCount {
+    font-size: 13px;
+    min-width: 16px;
+  }
+
+  .removeBtn {
+    font-size: 16px;
+  }
+}
+
+/* Тёмная тема */
+[data-theme="dark"] .qtyBtn {
+  background-color: #4A3F36;
+  border-color: #4A3F36;
+  color: #F5EDE3;
+}
+
+[data-theme="dark"] .qtyBtn:hover {
+  border-color: #FDB39A;
+  background-color: #3D352E;
+}
+
+[data-theme="dark"] .cartItem {
+  background-color: #3D352E;
+}
+
+[data-theme="dark"] .cartSummary {
+  background-color: #3D352E;
+}
+
+[data-theme="dark"] .removeBtn {
+  color: #E8A598;
+}

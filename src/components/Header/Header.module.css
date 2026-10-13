@@ -1,0 +1,268 @@
+.header {
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-title);
+  padding: 0 8px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-title);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  color: var(--color-title);
+}
+
+.link.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 700;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.themeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: transform 0.2s;
+}
+
+.themeBtn:hover {
+  transform: scale(1.1);
+}
+
+.authBtn {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.authBtn:hover {
+  background-color: var(--accent);
+  color: var(--color-title);
+}
+
+.cart {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--accent);
+  color: var(--color-title);
+  font-size: 12px;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileActions {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4px;
+}
+
+.mobileThemeBtn,
+.mobileLogoutBtn,
+.mobileLoginLink {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 8px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mobileThemeBtn:hover,
+.mobileLogoutBtn:hover,
+.mobileLoginLink:hover {
+  color: var(--color-title);
+}
+
+.mobileLoginLink {
+  color: var(--accent);
+}
+.langBtn {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.langBtn:hover {
+  background-color: var(--accent);
+  color: var(--color-title);
+}
+
+.mobileLangBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.mobileLangBtn:hover {
+  color: var(--color-title);
+}
+/* Мобилка */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    gap: 0;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0px 20px 40px var(--shadow-color);
+  }
+
+  .nav.open {
+    max-height: 500px;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .link {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .link.active {
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .mobileActions {
+    display: flex;
+  }
+
+  /* Скрываем кнопку входа/выхода на мобилке */
+  .authBtn {
+    display: none;
+  }
+
+  .right {
+    gap: 6px;
+  }
+
+  .cart {
+    font-size: 24px;
+  }
+
+  .themeBtn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .right {
+    gap: 4px;
+  }
+
+  .cart {
+    font-size: 22px;
+  }
+
+  .themeBtn {
+    font-size: 18px;
+  }
+}

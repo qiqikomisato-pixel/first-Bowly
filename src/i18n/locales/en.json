@@ -1,0 +1,179 @@
+{
+    "header": {
+        "logo": "BOWLY 🥗",
+        "home": "Home",
+        "sets": "Ready Bowls",
+        "catalog": "Constructor",
+        "myBowl": "My Bowl",
+        "profile": "Profile",
+        "admin": "Admin",
+        "login": "Login",
+        "logout": "Logout",
+        "cart": "Cart",
+        "theme": "Dark"
+    },
+    "home": {
+        "title": "Build your bowl in 5 steps",
+        "subtitle": "Simple, tasty, healthy.",
+        "button": "Build a bowl",
+        "howItWorks": "How it works",
+        "popularSets": "Popular ready bowls",
+        "viewAll": "View all →"
+    },
+    "steps": {
+        "base": "Base",
+        "protein": "Protein",
+        "vegetables": "Vegetables",
+        "sauce": "Sauce",
+        "topping": "Topping"
+    },
+    "sets": {
+        "title": "Ready Bowls",
+        "subtitle": "Choose the perfect meal from the chef",
+        "filters": {
+            "all": "All",
+            "chicken": "With Chicken",
+            "seafood": "With Seafood",
+            "vegan": "Vegan",
+            "spicy": "Spicy"
+        },
+        "addToCart": "Add to Cart"
+    },
+    "catalog": {
+        "title": "Constructor",
+        "subtitle": "Build your perfect bowl in 5 steps",
+        "step": "Step",
+        "back": "Back",
+        "next": "Next →",
+        "finish": "Go to My Bowl →",
+        "skip": "Skip step"
+    },
+    "myBowl": {
+        "title": "My Bowl",
+        "subtitle": "Your perfect meal is ready!",
+        "edit": "✏️ Edit",
+        "addToCart": "🛒 Add to Cart"
+    },
+    "cart": {
+        "title": "Cart",
+        "empty": "Cart is empty",
+        "emptyBtn": "Build a bowl",
+        "total": "Total",
+        "checkout": "Checkout →"
+    },
+    "checkout": {
+        "title": "Checkout",
+        "subtitle": "Fill in delivery details",
+        "step1": "Address",
+        "step2": "Delivery",
+        "step3": "Confirmation",
+        "address": "Where to deliver?",
+        "addressLabel": "Address*",
+        "entrance": "Entrance",
+        "apartment": "Apartment",
+        "phone": "Phone*",
+        "comment": "Order comment",
+        "delivery": "When to deliver?",
+        "date": "Delivery date*",
+        "time": "Delivery time*",
+        "selectTime": "Select time",
+        "confirm": "Order confirmation",
+        "summary": "Order summary",
+        "total": "Total",
+        "submit": "✅ Confirm order"
+    },
+    "profile": {
+        "title": "Profile",
+        "subtitle": "Manage your data and orders",
+        "tabs": {
+            "data": "📋 My Data",
+            "orders": "📦 Orders",
+            "recipes": "📝 Recipes"
+        },
+        "name": "Name",
+        "email": "Email",
+        "edit": "✏️ Edit",
+        "noOrders": "You have no orders yet",
+        "noRecipes": "You have no saved recipes yet",
+        "order": "Order #",
+        "statuses": {
+            "pending": "Pending",
+            "cooking": "Cooking",
+            "delivering": "Delivering",
+            "delivered": "Delivered"
+        }
+    },
+    "admin": {
+        "title": "Admin Panel",
+        "subtitle": "Manage your store",
+        "tabs": {
+            "products": "📦 Products",
+            "orders": "📋 Orders",
+            "users": "👥 Users"
+        },
+        "products": {
+            "title": "Products",
+            "add": "+ Add Product",
+            "name": "Name",
+            "price": "Price",
+            "category": "Category",
+            "inStock": "In Stock",
+            "inStockYes": "✅ In Stock",
+            "inStockNo": "❌ Out of Stock"
+        },
+        "orders": {
+            "title": "Orders",
+            "number": "#",
+            "user": "User",
+            "total": "Total",
+            "date": "Date",
+            "status": "Status"
+        },
+        "users": {
+            "title": "Users",
+            "name": "Name",
+            "email": "Email",
+            "registered": "Registered"
+        }
+    },
+    "auth": {
+        "login": "Login",
+        "loginSubtitle": "Sign in to your account",
+        "register": "Register",
+        "registerSubtitle": "Create an account",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "name": "Name",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?",
+        "registerLink": "Register",
+        "loginLink": "Login",
+        "error": "Please fill in all fields",
+        "passwordMismatch": "Passwords do not match"
+    },
+    "placeholder": {
+        "address": "Street, house",
+        "entrance": "№",
+        "apartment": "№",
+        "phone": "+7 (999) 123-45-67",
+        "comment": "Intercom, floor, notes...",
+        "email": "example@mail.ru",
+        "password": "••••••••",
+        "name": "Ivan Ivanov",
+        "search": "Search..."
+    },
+    "filter": {
+        "all": "All",
+        "chicken": "With Chicken",
+        "seafood": "With Seafood",
+        "vegan": "Vegan",
+        "spicy": "Spicy"
+    },
+    "status": {
+        "pending": "Pending",
+        "cooking": "Cooking",
+        "delivering": "Delivering",
+        "delivered": "Delivered"
+    }
+}

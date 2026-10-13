@@ -1,0 +1,301 @@
+.stepsIndicator {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.stepDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.stepDot.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--color-title);
+}
+
+.stepContent {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 24px;
+  min-height: 300px;
+}
+
+.stepTitle {
+  font-size: 28px;
+  color: var(--color-title);
+  margin-bottom: 8px;
+}
+
+.stepDescription {
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.selectionCount {
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.optionCard {
+  background-color: #ffffff;
+  padding: 20px 12px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 110px;
+  z-index: 1;
+  box-shadow: 0px 4px 12px var(--shadow-color);
+}
+
+.optionCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px var(--shadow-hover);
+  z-index: 100;
+}
+
+.optionCard.selected {
+  border-color: var(--accent);
+  background-color: #fff5f0;
+}
+
+.optionEmoji {
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+
+.optionCard:hover .optionEmoji {
+  transform: scale(0.85);
+}
+
+.optionName {
+  font-weight: 700;
+  color: var(--color-title);
+  font-size: 15px;
+}
+
+.optionTooltip {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0px);
+  background-color: var(--color-title);
+  color: var(--bg-primary);
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  z-index: 9999;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.optionCard:hover .optionTooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+.optionTooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--color-title);
+}
+
+.optionDescription {
+  display: block;
+  font-size: 11px;
+  opacity: 0.8;
+  font-weight: 400;
+  margin-top: 2px;
+  color: var(--bg-primary);
+}
+
+.stepNav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.stepNav button {
+  padding: 12px 32px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--color-title);
+  transition: all 0.2s;
+}
+
+.stepNav button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px rgba(74, 55, 40, 0.15);
+}
+
+.stepNav button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nutritionBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-title);
+  color: var(--bg-primary);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0px -8px 30px rgba(0,0,0,0.1);
+}
+
+.nutritionBar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 992px) {
+  .optionsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stepContent {
+    padding: 20px;
+  }
+
+  .stepTitle {
+    font-size: 22px;
+  }
+
+  .optionEmoji {
+    font-size: 32px;
+  }
+
+  .nutritionBar {
+    padding: 12px 20px;
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .stepNav {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 120px;
+  }
+
+  .stepNav button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .optionsGrid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .stepContent {
+    padding: 16px;
+  }
+
+  .stepTitle {
+    font-size: 20px;
+  }
+
+  .nutritionBar {
+    padding: 10px 16px;
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .stepNav {
+    margin-bottom: 140px;
+  }
+
+  .optionEmoji {
+    font-size: 28px;
+  }
+}
+
+/* Тёмная тема */
+[data-theme="dark"] .optionCard {
+  background-color: #4A3F36;
+  border-color: #4A3F36;
+}
+
+[data-theme="dark"] .optionCard:hover {
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .optionCard.selected {
+  background-color: #5A4F46;
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .optionTooltip {
+  background-color: #F5EDE3;
+  color: #4A3728;
+}
+
+[data-theme="dark"] .optionTooltip::before {
+  border-bottom-color: #F5EDE3;
+}
+
+[data-theme="dark"] .optionDescription {
+  color: #4A3728;
+}
+
+[data-theme="dark"] .nutritionBar {
+  background-color: #3D352E;
+  color: #F5EDE3;
+}

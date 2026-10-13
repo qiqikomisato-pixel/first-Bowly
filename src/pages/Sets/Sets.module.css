@@ -1,0 +1,136 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filterBtn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: var(--color-title);
+}
+
+.activeFilter {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--color-title);
+}
+
+.setsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.setCard {
+  background-color: var(--bg-card);
+  padding: 24px;
+  border-radius: 24px;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0px 20px 40px rgba(74, 55, 40, 0.06);
+}
+
+.setCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 24px 48px rgba(74, 55, 40, 0.10);
+}
+
+.setEmoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.setName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-title);
+  margin-bottom: 6px;
+}
+
+.setTags {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+  min-height: 24px;
+}
+
+.tag {
+  background-color: var(--accent);
+  color: var(--color-title);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 12px;
+  border-radius: 50px;
+}
+
+.setNutrition {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.setFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.setPrice {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-price);
+}
+
+.addBtn {
+  padding: 8px 24px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-title);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addBtn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .setsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .setsGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+}

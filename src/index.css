@@ -1,0 +1,46 @@
+/* Светлая тема (по умолчанию) */
+:root {
+  --bg-primary: #fff9f0;
+  --bg-card: #F5EDE3;
+  --bg-input: #ffffff;
+  --accent: #FDB39A;
+  --color-title: #4A3728;
+  --color-text: #7A6A5A;
+  --color-price: #A8D5BA;
+  --color-error: #E8A598;
+  --border-color: #E8DDD0;
+  --shadow-color: rgba(74, 55, 40, 0.08);
+  --shadow-hover: rgba(74, 55, 40, 0.12);
+}
+
+/* Тёмная тема */
+[data-theme="dark"] {
+  --bg-primary: #2A241F;
+  --bg-card: #3D352E;
+  --bg-input: #4A3F36;
+  --accent: #FDB39A;
+  --color-title: #F5EDE3;
+  --color-text: #CFC5B8;
+  --color-price: #A8D5BA;
+  --color-error: #E8A598;
+  --border-color: #4A3F36;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --shadow-hover: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease,
+              transform 0.2s ease;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--color-text);
+}

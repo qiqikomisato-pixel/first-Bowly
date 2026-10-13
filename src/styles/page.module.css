@@ -1,0 +1,39 @@
+.container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 56px;
+  color: var(--color-title);
+  font-family: 'Abril Fatface', serif;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--color-text);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+  }
+}

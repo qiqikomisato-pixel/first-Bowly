@@ -1,0 +1,151 @@
+.bowlPreview {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bowlEmoji {
+  font-size: 80px;
+  margin-bottom: 16px;
+}
+
+.bowlStats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-title);
+}
+
+.ingredientsList {
+  background-color: var(--bg-card);
+  padding: 24px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+.ingredientItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ingredientItem:last-child {
+  border-bottom: none;
+}
+
+.ingredientEmoji {
+  font-size: 28px;
+  width: 40px;
+}
+
+.ingredientInfo {
+  flex: 1;
+}
+
+.ingredientName {
+  font-weight: 700;
+  color: var(--color-title);
+  display: block;
+}
+
+.ingredientCategory {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.ingredientWeight {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.ingredientCalories {
+  font-weight: 700;
+  color: var(--color-price);
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.editBtn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editBtn:hover {
+  border-color: var(--color-text);
+  background-color: var(--bg-card);
+}
+
+.addToCartBtn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-title);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addToCartBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px rgba(74, 55, 40, 0.15);
+}
+/* Добавь в конец файла */
+
+.nutritionBlock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.nutritionItem {
+  background-color: var(--bg-card);
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.nutritionIcon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.nutritionValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-title);
+  display: block;
+}
+
+.nutritionLabel {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .nutritionBlock {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
